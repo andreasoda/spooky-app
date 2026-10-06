@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informativa sulla privacy di Spooky</title>
+<meta name="description" content="Cosa fa Spooky con i tuoi dati: restano sui tuoi dispositivi.">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="index.html"><img src="../assets/icon.png" alt="">Spooky</a>
+  <nav class="links"><a href="index.html">Spooky</a><a href="install.html">Installazione</a><a href="privacy.html" class="current">Privacy</a><a href="https://github.com/andreasoda/spooky-app/releases">Download</a><a href="../privacy.html">English</a></nav>
+</header>
+
+<div class="prose">
+<h1>Informativa sulla privacy</h1>
+<p>Ultimo aggiornamento: 6 ottobre 2026.</p>
+<p><strong>In breve: Spooky non raccoglie, non conserva e non condivide i tuoi dati. Tutto resta tra i tuoi dispositivi.</strong></p>
+<h2>Niente server, niente account, nessun tracciamento</h2>
+<p>Spooky non ha server né account utente. L'app per Mac e l'app per iPad e iPhone si collegano direttamente tra loro, sulla rete di casa o tramite Tailscale. Spooky non contiene codice di statistiche, pubblicità o tracciamento.</p>
+<h2>Cosa viaggia tra i tuoi dispositivi</h2>
+<p>Durante una sessione il Mac invia schermo e audio all'iPad o all'iPhone, e il dispositivo rimanda tastiera, puntatore e tocchi, gli Appunti quando copi qualcosa e, se lo attivi, il microfono. Tutto viaggia cifrato, solo tra i tuoi dispositivi associati, e non viene registrato.</p>
+<h2>Associazione</h2>
+<p>Quando associ un dispositivo, Spooky crea una chiave che conoscono solo i tuoi dispositivi. È salvata nel Portachiavi e, perché gli altri tuoi dispositivi trovino il Mac senza inquadrare di nuovo il codice, nel Portachiavi iCloud e nell'archivio iCloud del tuo Account Apple, insieme al nome del Mac e ai suoi indirizzi di rete. Apple gestisce questi dati secondo la propria informativa; Spooky non può leggerli da nessun altro posto.</p>
+<h2>Permessi</h2>
+<p>Sul Mac Spooky chiede Registrazione schermo (per mostrare lo schermo), Accessibilità (per muovere il puntatore e scrivere), l'accesso alla rete locale e all'audio di sistema (per far sentire il Mac sul dispositivo). Sull'iPad o sull'iPhone chiede l'accesso alla rete locale, la fotocamera (solo per inquadrare il codice di associazione; nessuna immagine viene conservata) e, se lo attivi, il microfono.</p>
+<h2>Diagnostica</h2>
+<p>L'app per Mac scrive dei log diagnostici sulla qualità del collegamento (per esempio fotogrammi al secondo e ritardo di rete) solo sul tuo Mac, in <code>~/Library/Logs/Spooky</code>. Non vengono mai inviati da nessuna parte. Puoi cancellarli quando vuoi.</p>
+<h2>Terze parti</h2>
+<p>Se usi Tailscale per collegarti fuori casa, per quel servizio vale l'informativa sulla privacy di Tailscale.</p>
+<h2>Contatti</h2>
+<p>Domande su questa informativa: <a href="https://github.com/andreasoda/spooky-app/issues">github.com/andreasoda/spooky-app/issues</a>.</p>
+</div>
+
+<footer>
+  <div class="row">
+    <span>Spooky è un progetto indipendente di Andrea Soda. Mac, iPad e iPhone sono marchi di Apple Inc.</span>
+    <a href="https://github.com/andreasoda/spooky-app/issues">Domande e suggerimenti</a>
+  </div>
+</footer>
+</div>
+</body>
+</html>

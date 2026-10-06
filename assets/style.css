@@ -1,0 +1,108 @@
+:root {
+  --night: #120d2e;
+  --dusk: #241a52;
+  --accent: #8f78ff;
+  --accent-soft: rgba(143, 120, 255, 0.16);
+  --teal: #40bfd9;
+  --text: #f2f0ff;
+  --muted: #b7b1d9;
+  --card: rgba(255, 255, 255, 0.06);
+  --line: rgba(255, 255, 255, 0.12);
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background:
+    radial-gradient(60rem 40rem at 15% -10%, rgba(143, 120, 255, 0.35), transparent 60%),
+    radial-gradient(50rem 35rem at 100% 10%, rgba(64, 191, 217, 0.18), transparent 60%),
+    linear-gradient(180deg, var(--dusk) 0%, var(--night) 55%);
+  background-color: var(--night);
+  min-height: 100vh;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+header.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0;
+}
+
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 600; font-size: 18px; }
+.brand img { width: 32px; height: 32px; border-radius: 8px; }
+
+nav.links { display: flex; gap: 18px; flex-wrap: wrap; font-size: 15px; }
+nav.links a { color: var(--muted); }
+nav.links a:hover, nav.links a.current { color: var(--text); text-decoration: none; }
+
+.hero { text-align: center; padding: 56px 0 40px; }
+.hero img.icon { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 20px 60px rgba(143, 120, 255, 0.35); }
+.hero h1 { font-size: clamp(34px, 6vw, 54px); line-height: 1.1; margin: 28px 0 12px; letter-spacing: -0.02em; }
+.hero p.lead { font-size: clamp(17px, 2.4vw, 21px); color: var(--muted); max-width: 640px; margin: 0 auto 28px; }
+
+.buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.button {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 22px; border-radius: 999px; font-weight: 600; font-size: 16px;
+  background: var(--accent); color: #fff;
+}
+.button:hover { text-decoration: none; filter: brightness(1.08); }
+.button.secondary { background: var(--card); color: var(--text); border: 1px solid var(--line); }
+.note { color: var(--muted); font-size: 14px; margin-top: 14px; }
+
+section { padding: 36px 0; }
+section h2 { font-size: 28px; margin: 0 0 18px; letter-spacing: -0.01em; }
+section > p { color: var(--muted); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+.card h3 { margin: 0 0 6px; font-size: 18px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.card .glyph { font-size: 24px; margin-bottom: 8px; }
+
+ol.steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+ol.steps > li {
+  counter-increment: step; position: relative;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 18px 20px 18px 64px; margin-bottom: 12px;
+}
+ol.steps > li::before {
+  content: counter(step); position: absolute; left: 18px; top: 16px;
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--accent-soft); color: var(--accent); font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+ol.steps h3 { margin: 0 0 4px; font-size: 18px; }
+ol.steps p { margin: 4px 0; color: var(--muted); }
+
+.prose { max-width: 720px; }
+.prose h1 { font-size: 36px; margin: 40px 0 8px; }
+.prose h2 { font-size: 22px; margin: 32px 0 8px; }
+.prose p, .prose li { color: var(--muted); }
+.prose strong { color: var(--text); }
+
+code, kbd {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.92em;
+  background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px;
+}
+
+footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+@media (max-width: 560px) {
+  header.top { flex-direction: column; align-items: flex-start; }
+  ol.steps > li { padding-left: 56px; }
+}
