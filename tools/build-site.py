@@ -11,18 +11,21 @@ REPO = "https://github.com/andreasoda/spooky-app"
 DOWNLOAD = REPO + "/releases/latest/download/Spooky.pkg"
 RELEASES = REPO + "/releases"
 ISSUES = REPO + "/issues"
+STUDIO = "https://sokitstudio.com"
+SUPPORT = "support@sokitstudio.com"
+PRIVACY_MAIL = "privacy@sokitstudio.com"
 
 T = {
     "en": {
         "lang": "en", "base": "", "other": "it/", "other_label": "Italiano",
         "nav": [("index.html", "Spooky"), ("install.html", "Install"), ("privacy.html", "Privacy"), (RELEASES, "Downloads")],
-        "footer": "Spooky is an independent project by Andrea Soda. Mac, iPad and iPhone are trademarks of Apple Inc.",
+        "footer": "Spooky is made by Sokit Studio (Andrea Soda). Mac, iPad and iPhone are trademarks of Apple Inc.",
         "contact": "Questions and feedback",
     },
     "it": {
         "lang": "it", "base": "../", "other": "../", "other_label": "English",
         "nav": [("index.html", "Spooky"), ("install.html", "Installazione"), ("privacy.html", "Privacy"), (RELEASES, "Download")],
-        "footer": "Spooky è un progetto indipendente di Andrea Soda. Mac, iPad e iPhone sono marchi di Apple Inc.",
+        "footer": "Spooky è un'app di Sokit Studio (Andrea Soda). Mac, iPad e iPhone sono marchi di Apple Inc.",
         "contact": "Domande e suggerimenti",
     },
 }
@@ -56,7 +59,7 @@ def page(lang, file, title, description, body):
 <footer>
   <div class="row">
     <span>{t['footer']}</span>
-    <a href="{ISSUES}">{t['contact']}</a>
+    <a href="mailto:{SUPPORT}">{t['contact']}</a>
   </div>
 </footer>
 </div>
@@ -205,7 +208,7 @@ PRIVACY = {
         body=f"""
 <div class="prose">
 <h1>Privacy policy</h1>
-<p>Last updated: 6 October 2026.</p>
+<p>Last updated: 7 October 2026.</p>
 <p><strong>In short: Spooky does not collect, store or share your data. Everything stays between your own devices.</strong></p>
 <h2>No servers, no accounts, no tracking</h2>
 <p>Spooky has no servers and no user accounts. The Mac app and the iPad and iPhone app connect to each other directly, over your local network or through Tailscale. Spooky contains no analytics, advertising or tracking code.</p>
@@ -220,7 +223,13 @@ PRIVACY = {
 <h2>Third parties</h2>
 <p>If you use Tailscale to connect away from home, Tailscale's own privacy policy applies to that service.</p>
 <h2>Contact</h2>
-<p>Questions about this policy: <a href="{ISSUES}">{ISSUES.replace("https://", "")}</a>.</p>
+<p>Spooky is published by Andrea Soda (<a href="{STUDIO}">Sokit Studio</a>), the data controller for the processing described here. Privacy questions and requests: <a href="mailto:{PRIVACY_MAIL}">{PRIVACY_MAIL}</a>; support: <a href="mailto:{SUPPORT}">{SUPPORT}</a>.</p>
+<h2>Support requests</h2>
+<p>If you write to us, your email address and message are used only to answer you (legal basis: your request, art. 6(1)(b) and (f) GDPR) and are deleted within 24 months of the last exchange.</p>
+<h2>This website</h2>
+<p>This site uses no cookies, analytics or scripts. It is hosted by GitHub Pages: GitHub may log visitors' IP addresses for security, under <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">its privacy statement</a>.</p>
+<h2>Your rights</h2>
+<p>You can ask for access to, correction or deletion of your data, restriction of or objection to its processing, and portability, at the address above. You can also lodge a complaint with your data protection authority; in Italy, the <a href="https://www.garanteprivacy.it">Garante per la protezione dei dati personali</a>.</p>
 </div>
 """),
     "it": dict(
@@ -229,7 +238,7 @@ PRIVACY = {
         body=f"""
 <div class="prose">
 <h1>Informativa sulla privacy</h1>
-<p>Ultimo aggiornamento: 6 ottobre 2026.</p>
+<p>Ultimo aggiornamento: 7 ottobre 2026.</p>
 <p><strong>In breve: Spooky non raccoglie, non conserva e non condivide i tuoi dati. Tutto resta tra i tuoi dispositivi.</strong></p>
 <h2>Niente server, niente account, nessun tracciamento</h2>
 <p>Spooky non ha server né account utente. L'app per Mac e l'app per iPad e iPhone si collegano direttamente tra loro, sulla rete di casa o tramite Tailscale. Spooky non contiene codice di statistiche, pubblicità o tracciamento.</p>
@@ -244,7 +253,13 @@ PRIVACY = {
 <h2>Terze parti</h2>
 <p>Se usi Tailscale per collegarti fuori casa, per quel servizio vale l'informativa sulla privacy di Tailscale.</p>
 <h2>Contatti</h2>
-<p>Domande su questa informativa: <a href="{ISSUES}">{ISSUES.replace("https://", "")}</a>.</p>
+<p>Spooky è pubblicata da Andrea Soda (<a href="{STUDIO}">Sokit Studio</a>), titolare dei trattamenti descritti qui. Domande e richieste sulla privacy: <a href="mailto:{PRIVACY_MAIL}">{PRIVACY_MAIL}</a>; assistenza: <a href="mailto:{SUPPORT}">{SUPPORT}</a>.</p>
+<h2>Richieste di assistenza</h2>
+<p>Se ci scrivi, il tuo indirizzo email e il messaggio servono solo a risponderti (base giuridica: la tua richiesta, art. 6, par. 1, lett. b e f del GDPR) e vengono cancellati entro 24 mesi dall'ultimo scambio.</p>
+<h2>Questo sito</h2>
+<p>Questo sito non usa cookie, statistiche né script. È ospitato da GitHub Pages: GitHub può registrare l'indirizzo IP dei visitatori per motivi di sicurezza, secondo <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">la propria informativa</a>.</p>
+<h2>I tuoi diritti</h2>
+<p>Puoi chiedere all'indirizzo sopra l'accesso ai tuoi dati, la rettifica, la cancellazione, la limitazione del trattamento, l'opposizione e la portabilità. Puoi anche proporre reclamo al <a href="https://www.garanteprivacy.it">Garante per la protezione dei dati personali</a>.</p>
 </div>
 """),
 }
